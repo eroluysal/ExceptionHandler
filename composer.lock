@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "a904e255fac6eb5aee9a8a5f4946ad08",
+    "hash": "3e494756025d433e423fc5cb40fd99dc",
     "packages": [
         {
             "name": "danielstjules/stringy",
@@ -131,25 +131,25 @@
         },
         {
             "name": "illuminate/contracts",
-            "version": "dev-master",
+            "version": "5.0.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/contracts.git",
-                "reference": "4ffe4616bfba05a2664fc0646c94d5179d563f11"
+                "reference": "6d23815fee6057b29cab8094af8cbb8ce3ac82e4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/contracts/zipball/4ffe4616bfba05a2664fc0646c94d5179d563f11",
-                "reference": "4ffe4616bfba05a2664fc0646c94d5179d563f11",
+                "url": "https://api.github.com/repos/illuminate/contracts/zipball/6d23815fee6057b29cab8094af8cbb8ce3ac82e4",
+                "reference": "6d23815fee6057b29cab8094af8cbb8ce3ac82e4",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.5.9"
+                "php": ">=5.4.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "5.2-dev"
+                    "dev-master": "5.0-dev"
                 }
             },
             "autoload": {
@@ -169,32 +169,32 @@
             ],
             "description": "The Illuminate Contracts package.",
             "homepage": "http://laravel.com",
-            "time": "2015-06-04 17:27:21"
+            "time": "2015-05-15 07:22:28"
         },
         {
             "name": "illuminate/log",
-            "version": "dev-master",
+            "version": "5.0.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/log.git",
-                "reference": "88e9d7f21d42f8a5f9558b212d4c67d5dd890a54"
+                "reference": "471db28347074fa29ccdbf5c4caf058be41ae4ce"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/log/zipball/88e9d7f21d42f8a5f9558b212d4c67d5dd890a54",
-                "reference": "88e9d7f21d42f8a5f9558b212d4c67d5dd890a54",
+                "url": "https://api.github.com/repos/illuminate/log/zipball/471db28347074fa29ccdbf5c4caf058be41ae4ce",
+                "reference": "471db28347074fa29ccdbf5c4caf058be41ae4ce",
                 "shasum": ""
             },
             "require": {
-                "illuminate/contracts": "5.2.*",
-                "illuminate/support": "5.2.*",
+                "illuminate/contracts": "5.0.*",
+                "illuminate/support": "5.0.*",
                 "monolog/monolog": "~1.11",
-                "php": ">=5.5.9"
+                "php": ">=5.4.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "5.2-dev"
+                    "dev-master": "5.0-dev"
                 }
             },
             "autoload": {
@@ -214,37 +214,37 @@
             ],
             "description": "The Illuminate Log package.",
             "homepage": "http://laravel.com",
-            "time": "2015-06-01 16:10:10"
+            "time": "2015-03-25 15:58:31"
         },
         {
             "name": "illuminate/support",
-            "version": "dev-master",
+            "version": "5.0.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/support.git",
-                "reference": "b44f6a03325954bf4fda7605281fe82825ae6b54"
+                "reference": "28dcacacd2091c106e352db1732eda8c590914f6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/support/zipball/b44f6a03325954bf4fda7605281fe82825ae6b54",
-                "reference": "b44f6a03325954bf4fda7605281fe82825ae6b54",
+                "url": "https://api.github.com/repos/illuminate/support/zipball/28dcacacd2091c106e352db1732eda8c590914f6",
+                "reference": "28dcacacd2091c106e352db1732eda8c590914f6",
                 "shasum": ""
             },
             "require": {
                 "danielstjules/stringy": "~1.8",
                 "doctrine/inflector": "~1.0",
                 "ext-mbstring": "*",
-                "illuminate/contracts": "5.2.*",
-                "php": ">=5.5.9"
+                "illuminate/contracts": "5.0.*",
+                "php": ">=5.4.0"
             },
             "suggest": {
                 "jeremeamia/superclosure": "Required to be able to serialize closures (~2.0).",
-                "symfony/var-dumper": "Required to use the dd function (2.8.*)."
+                "symfony/var-dumper": "Required to use the dd function (2.6.*)."
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "5.2-dev"
+                    "dev-master": "5.0-dev"
                 }
             },
             "autoload": {
@@ -267,7 +267,7 @@
             ],
             "description": "The Illuminate Support package.",
             "homepage": "http://laravel.com",
-            "time": "2015-06-04 14:16:41"
+            "time": "2015-06-04 12:15:51"
         },
         {
             "name": "monolog/monolog",
@@ -611,12 +611,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/ReflectionDocBlock.git",
-                "reference": "ae15da2ce234d3ffe5d7fafcdad19c7f1acf3568"
+                "reference": "afd2520734b8a46bb0e677a10f594f61afb132c4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/ae15da2ce234d3ffe5d7fafcdad19c7f1acf3568",
-                "reference": "ae15da2ce234d3ffe5d7fafcdad19c7f1acf3568",
+                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/afd2520734b8a46bb0e677a10f594f61afb132c4",
+                "reference": "afd2520734b8a46bb0e677a10f594f61afb132c4",
                 "shasum": ""
             },
             "require": {
@@ -652,7 +652,7 @@
                     "email": "mike.vanriel@naenius.com"
                 }
             ],
-            "time": "2015-05-12 07:21:12"
+            "time": "2015-06-06 19:40:28"
         },
         {
             "name": "phpspec/prophecy",
@@ -1086,6 +1086,58 @@
                 "xunit"
             ],
             "time": "2015-06-03 13:12:50"
+        },
+        {
+            "name": "raven/raven",
+            "version": "0.11.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/getsentry/raven-php.git",
+                "reference": "2b651d779cdbac8b6456b3b0f06c8c77e43f79dd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/getsentry/raven-php/zipball/2b651d779cdbac8b6456b3b0f06c8c77e43f79dd",
+                "reference": "2b651d779cdbac8b6456b3b0f06c8c77e43f79dd",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.4"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "3.7.*"
+            },
+            "bin": [
+                "bin/raven"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.8.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Raven_": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD"
+            ],
+            "authors": [
+                {
+                    "name": "David Cramer",
+                    "email": "dcramer@gmail.com"
+                }
+            ],
+            "description": "A PHP client for Sentry (http://getsentry.com)",
+            "homepage": "http://getsentry.com",
+            "keywords": [
+                "log",
+                "logging"
+            ],
+            "time": "2015-03-24 23:17:13"
         },
         {
             "name": "sebastian/comparator",

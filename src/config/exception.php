@@ -11,7 +11,7 @@ return [
 	| This driver manages the retrieval and authentication of the users
 	| attempting to get access to protected areas of your application.
 	|
-	| Supported: "log", "bugsnag"
+	| Supported: "log", "bugsnag", "sentry
 	|
 	*/
 
@@ -32,6 +32,12 @@ return [
 
 		'bugsnag' => [
 			'key' => ''
+		],
+
+		'sentry' => [
+			'project' => '',
+			'public'  => '',
+			'secret'  => '',
 		]
 
 	]

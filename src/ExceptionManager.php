@@ -2,6 +2,7 @@
 
 use Bugsnag_Client as Bugsnag;
 use Illuminate\Support\Manager;
+use Raven_Client as RavenClient;
 
 class ExceptionManager extends Manager {
 
@@ -23,6 +24,24 @@ class ExceptionManager extends Manager {
 	protected function createBugsnagDriver()
 	{
 		return new BugsnagException($this->app['bugsnag']);
+	}
+
+	/**
+	 * Create an instance of the Sentry Exception driver.
+	 *
+	 * @return \QweB\Exception\Contracts\Exception
+	 */
+	protected function createSentryDriver()
+	{
+		list($project, $public, $secret) = $this->getConfig('sentry');
+
+		$raven = new RavenClient(null, [
+			'project' 	 => $project,
+			'public_key' => $public,
+			'secret_key' => $secret
+		]);
+
+		return new SentryException($raven);
 	}
 
 	/**
