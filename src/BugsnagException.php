@@ -32,7 +32,7 @@ class BugsnagException implements ExceptionContract {
 	 */
 	public function report(BaseException $e)
 	{
-		$this->bugsnag->notifyException((string) $e);
+		$this->bugsnag->notifyException($e);
 	}
 
 }
