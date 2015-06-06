@@ -33,13 +33,11 @@ class ExceptionManager extends Manager {
 	 */
 	protected function createSentryDriver()
 	{
-		list($project, $public, $secret) = $this->getConfig('sentry');
+		$config = $this->getConfig('sentry');
 
-		$raven = new RavenClient(null, [
-			'project' 	 => $project,
-			'public_key' => $public,
-			'secret_key' => $secret
-		]);
+		$raven = new RavenClient(
+			"https://{$config['public']}:{$config['secret']}@app.getsentry.com/{$config['project']}"
+		);
 
 		return new SentryException($raven);
 	}
