@@ -4,12 +4,12 @@ return [
 
 	/*
 	|--------------------------------------------------------------------------
-	| Default Authentication Driver
+	| Default Exception Driver
 	|--------------------------------------------------------------------------
 	|
-	| This option controls the authentication driver that will be utilized.
-	| This driver manages the retrieval and authentication of the users
-	| attempting to get access to protected areas of your application.
+	| This option will determine the catch exceptions provided. It captures
+	| all the errors and sends it to the specified drive. Supported drives
+	| are as follows.
 	|
 	| Supported: "log", "bugsnag", "sentry"
 	|
