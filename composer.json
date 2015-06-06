@@ -9,7 +9,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "QweB\\Exception": "src/"
+            "QweB\\Exception\\": "src/"
         }
     },
     "require": {
