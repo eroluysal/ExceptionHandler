@@ -1,60 +1,68 @@
-<?php namespace QweB\Exception;
+<?php
 
-use Bugsnag_Client as Bugsnag;
+namespace QweB\Exception;
+
+use Raven_Client as RavenClient;
+use Bugsnag_Client as BugsnagClient;
 use Illuminate\Support\ServiceProvider;
 
-class ExceptionServiceProvider extends ServiceProvider {
+class ExceptionServiceProvider extends ServiceProvider
+{
+    /**
+     * Boot the service provider.
+     */
+    public function boot()
+    {
+        $this->publishes([
+            __DIR__.'/config/exception.php' => config_path('exception.php'),
+        ], 'exception');
+    }
 
-	/**
-	 * Boot the service provider.
-	 *
-	 * @return void
-	 */
-	public function boot()
-	{
-		$this->publishes([
-			__DIR__.'/config/exception.php' => config_path('exception.php')
-		], 'exception');
-	}
+    /**
+     * Register the service provider.
+     */
+    public function register()
+    {
+        $this->registerBugsnagClientProvider();
 
-	/**
-	 * Register the service provider.
-	 *
-	 * @return void
-	 */
-	public function register()
-	{
-		$this->registerBugsnagClientProvider();
+        $this->registerSentryClient();
 
-		$this->registerExceptionHandler();
-	}
+        $this->registerExceptionHandler();
+    }
 
-	/**
-	 * Register the bugnsag client.
-	 *
-	 * @return void
-	 */
-	protected function registerBugsnagClientProvider()
-	{
-		$this->app->singleton('bugsnag', function($app)
-		{
-			$key = $app['config']['exception.connections.bugsnag.key'];
+    /**
+     * Register the sentry client.
+     */
+    protected function registerSentryClient()
+    {
+        $this->app->singleton('sentry', function ($app) {
+            $config = $app['config']['exceptions.connections.sentry'];
 
-			return new Bugsnag($key);
-		});
-	}
+            return new RavenClient(
+                "https://{$config['public']}:{$config['secret']}@app.getsentry.com/{$config['project']}"
+            );
+        });
+    }
 
-	/**
-	 * Register the exception handler provider.
-	 *
-	 * @return void
-	 */
-	protected function registerExceptionHandler()
-	{
-		$this->app->bindShared('QweB\Exception\Contracts\Exception', function($app)
-		{
-			return new ExceptionManager($app);
-		});
-	}
+    /**
+     * Register the bugnsag client.
+     */
+    protected function registerBugsnagClientProvider()
+    {
+        $this->app->singleton('bugsnag', function ($app) {
+            $key = $app['config']['exception.connections.bugsnag.key'];
 
+            return new BugsnagClient($key);
+        });
+    }
+
+    /**
+     * Register the exception handler provider.
+     */
+    protected function registerExceptionHandler()
+    {
+        $this->app->bindShared('QweB\Exception\Contracts\Exception', function ($app) {
+            return new ExceptionManager($app);
+        });
+    }
 }
