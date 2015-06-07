@@ -23,7 +23,7 @@ class ExceptionServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->registerBugsnagClientProvider();
+        $this->registerBugsnagClient();
 
         $this->registerSentryClient();
 
@@ -47,7 +47,7 @@ class ExceptionServiceProvider extends ServiceProvider
     /**
      * Register the bugnsag client.
      */
-    protected function registerBugsnagClientProvider()
+    protected function registerBugsnagClient()
     {
         $this->app->singleton('bugsnag', function ($app) {
             $key = $app['config']['exception.connections.bugsnag.key'];
