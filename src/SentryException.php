@@ -11,7 +11,8 @@ class SentryException implements ExceptionContract
     /**
      * Create a Sentry exception instance.
      *
-     * @param \Raven_Client $raven
+     * @param  \Raven_Client  $raven
+     * @return void
      */
     public function __construct(RavenClient $raven)
     {
@@ -21,7 +22,7 @@ class SentryException implements ExceptionContract
     /**
      * Report an exception.
      *
-     * @param \Exception $e
+     * @param  \Exception  $e
      */
     public function report(BaseException $e)
     {

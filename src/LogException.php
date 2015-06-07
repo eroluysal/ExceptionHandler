@@ -18,7 +18,8 @@ class LogException implements  ExceptionContract
     /**
      * Create a new LogException instance.
      *
-     * @param \Psr\Log\LoggerInterface $log
+     * @param  \Psr\Log\LoggerInterface  $log
+     * @return void
      */
     public function __construct(LoggerInterface $log)
     {
@@ -28,8 +29,7 @@ class LogException implements  ExceptionContract
     /**
      * Report an exception.
      *
-     * @param \Exception $e
-     *
+     * @param  \Exception  $e
      * @return string
      */
     public function report(BaseException $e)

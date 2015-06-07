@@ -10,6 +10,8 @@ class ExceptionServiceProvider extends ServiceProvider
 {
     /**
      * Boot the service provider.
+     *
+     * @return void
      */
     public function boot()
     {
@@ -20,6 +22,8 @@ class ExceptionServiceProvider extends ServiceProvider
 
     /**
      * Register the service provider.
+     *
+     * @return void
      */
     public function register()
     {
@@ -32,6 +36,8 @@ class ExceptionServiceProvider extends ServiceProvider
 
     /**
      * Register the sentry client.
+     *
+     * @return void
      */
     protected function registerSentryClient()
     {
@@ -46,6 +52,8 @@ class ExceptionServiceProvider extends ServiceProvider
 
     /**
      * Register the bugnsag client.
+     *
+     * @return void
      */
     protected function registerBugsnagClient()
     {
@@ -58,6 +66,8 @@ class ExceptionServiceProvider extends ServiceProvider
 
     /**
      * Register the exception handler provider.
+     *
+     * @return void
      */
     protected function registerExceptionHandler()
     {
