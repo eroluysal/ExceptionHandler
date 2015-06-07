@@ -18,7 +18,8 @@ class BugsnagException implements ExceptionContract
     /**
      * Create a new Bugsnag exception intance.
      *
-     * @param \Bugsnag_Client $bugsnag
+     * @param  \Bugsnag_Client  $bugsnag
+     * @return void
      */
     public function __construct(Bugsnag $bugsnag)
     {
@@ -28,7 +29,8 @@ class BugsnagException implements ExceptionContract
     /**
      * Report an exception.
      *
-     * @param \Exception $e
+     * @param  \Exception  $e
+     * @return void
      */
     public function report(BaseException $e)
     {
