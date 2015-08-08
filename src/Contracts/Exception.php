@@ -9,7 +9,8 @@ interface Exception
     /**
      * Report an exception.
      *
-     * @param  \Exception  $e
+     * @param \Exception $e
+     *
      * @return void
      */
     public function report(BaseException $e);

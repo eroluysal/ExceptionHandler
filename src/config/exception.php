@@ -36,8 +36,8 @@ return [
 
         'sentry' => [
             'project' => '',
-            'public' => '',
-            'secret' => '',
+            'public'  => '',
+            'secret'  => '',
         ],
 
     ],
