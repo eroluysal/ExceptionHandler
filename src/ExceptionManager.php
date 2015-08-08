@@ -51,6 +51,7 @@ class ExceptionManager extends Manager
      * Get the exception connection configuration.
      *
      * @param string $name
+     *
      * @return array
      */
     protected function getConfig($name)

@@ -2,9 +2,9 @@
 
 namespace QweB\Exception;
 
-use Raven_Client as RavenClient;
 use Bugsnag_Client as BugsnagClient;
 use Illuminate\Support\ServiceProvider;
+use Raven_Client as RavenClient;
 
 class ExceptionServiceProvider extends ServiceProvider
 {

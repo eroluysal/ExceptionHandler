@@ -3,15 +3,16 @@
 namespace QweB\Exception;
 
 use Exception as BaseException;
-use Raven_client as RavenClient;
 use QweB\Exception\Contracts\Exception as ExceptionContract;
+use Raven_client as RavenClient;
 
 class SentryException implements ExceptionContract
 {
     /**
      * Create a Sentry exception instance.
      *
-     * @param  \Raven_Client  $raven
+     * @param \Raven_Client $raven
+     *
      * @return void
      */
     public function __construct(RavenClient $raven)
@@ -22,7 +23,8 @@ class SentryException implements ExceptionContract
     /**
      * Report an exception.
      *
-     * @param  \Exception  $e
+     * @param \Exception $e
+     *
      * @return void
      */
     public function report(BaseException $e)
